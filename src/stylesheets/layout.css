@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--c-dark-blue);
+    color: var(--c-white);
+    font-family: "Nunito";
+    font-weight: 400;
+}
+
+.synth__container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--c-main-blue);
+    border-radius: 20px;
+    border: 1px solid var(--c-light-blue);
+}
+
+.header__container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.lamps__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lamps__line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lamps__line:nth-child(2) {
+    width: 93.5%
+}
+
+.lamp {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--c-light-blue);
+}
+
+.lamp--active {
+    background-color: var(--c-yellow);
+    box-shadow: var(--sh-yellow);
+}
+
+.transport-buttons__container {
+    display: flex;
+    gap: 20px;
+}
+
+.transport-button {
+    width: 80px;
+    height: 80px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--c-yellow);
+    box-shadow: var(--sh-yellow);
+}
+
+.transport-button__icon {
+    fill: var(--c-main-blue)
+}
+
+.transport-button--disabled {
+    background-color: var(--c-light-blue);
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.part-settings__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.settings__container {
+    width: calc((100% - 40px) / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    opacity: 50%;
+}
+
+.setting__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sequence__wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sequence__button {
+    width: calc((100% - 36px) / 4);
+    height: 48px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--c-light-blue);
+}
+
+.sequence__button--active {
+    background-color: var(--c-yellow);
+    box-shadow: var(--sh-yellow);
+}
+
+.volume__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mute__button {
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--c-light-blue);
+    min-width: 60px;
+}
+
+.mute__button--active {
+    background-color: var(--c-yellow);
+    box-shadow: var(--sh-yellow);
+    color: var(--c-main-blue);
+}
+
+.slider {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 3px;
+    background: var(--c-light-blue);
+    border-radius: 2px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--c-yellow);
+  box-shadow: var(--sh-yellow);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .synth__container {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .container {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .header__container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .lamps__line:nth-child(2) {
+        width: 90%
+    }
+
+    .lamp {
+        width: 12px;
+        height: 12px;
+    }
+
+    .lamp--mobile {
+        display: none;
+    }
+
+    .transport-buttons__container {
+        gap: 12px;
+    }
+
+    .transport-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .transport-button__icon__wrapper {
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    .part-settings__wrapper {
+        gap: 16px;
+    }
+
+    .settings__container {
+        width: 100%;
+        gap: 16px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .setting__wrapper {
+        gap: 8px;
+    }
+
+    .sequence__wrapper {
+        gap: 4px;
+    }
+
+    .sequence__button {
+        width: calc((100% - 12px) / 4);
+        height: 32px;
+    }
+
+    .volume__wrapper {
+        gap: 12px;
+    }
+
+    .mute__button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .slider {
+        height: 2px;
+    }
+
+    .slider::-webkit-slider-thumb {
+        height: 12px;
+        width: 12px;
+    }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starlight Synth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon-zx40a4en.png" />
+    
+    
+  <link rel="stylesheet" crossorigin href="./chunk-53h7qag0.css"><script type="module" crossorigin src="./chunk-1d3kf32t.js"></script></head>
+
+  <body>
+    <div class="synth__container">
+      <div class="container header__container">
+        <div class="lamps__container">
+          <div class="lamps__line">
+            <div class="lamp lamp--active"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+          </div>
+          <div class="lamps__line">
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+          </div>
+          <div class="lamps__line">
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+            <div class="lamp lamp--mobile"></div>
+          </div>
+        </div>
+        <div class="transport-buttons__container">
+          <button class="transport-button" id="play">
+            <svg class="transport-button__icon__wrapper" width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="transport-button__icon" d="M30 14.5092C32.6667 16.0607 32.6667 19.9393 30 21.4908L6 35.454C3.33333 37.0054 -1.34596e-07 35.0661 0 31.9632L1.21137e-06 4.03683C1.34596e-06 0.933907 3.33333 -1.00542 6 0.546041L30 14.5092Z" fill="black"/>
+            </svg>
+          </button>
+          <button class="transport-button" id="pause">
+            <svg class="transport-button__icon__wrapper" width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="transport-button__icon"  width="11" height="38" rx="5.5" fill="black"/>
+            <rect class="transport-button__icon"  x="23" width="11" height="38" rx="5.5" fill="black"/>
+            </svg>
+          </button>
+          <button class="transport-button" id="stop">
+            <svg class="transport-button__icon__wrapper" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="transport-button__icon" width="38" height="38" rx="5" fill="black"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="part-settings__wrapper">
+        <div class="container settings__container">
+          <h2>melody</h2>
+
+          <div class="setting__wrapper">
+            <h3>sequence</h3>
+            <div class="sequence__wrapper">
+              <button class="sequence__button" id="melody__sequence-1"></button>
+              <button class="sequence__button" id="melody__sequence-2"></button>
+              <button class="sequence__button" id="melody__sequence-3"></button>
+              <button class="sequence__button" id="melody__sequence-4"></button>
+            </div>
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="melody-volume" type="range" min="-60" max="12" step="1" value="0">
+              <button class="mute__button" id="melody-mute">mute</button>
+            </div>
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>decay</h3>
+              <input class="slider slider__effects" id="melody-decay" type="range" min="0.1" max="5" step="0.1" value="2">
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>echo</h3>
+              <input class="slider slider__effects" id="melody-echo" type="range" min="0" max="1" step="0.01" value="0">
+          </div>
+        </div>
+
+        <div class="container settings__container">
+          <h2>harmony</h2>
+
+          <div class="setting__wrapper">
+            <h3>sequence</h3>
+            <div class="sequence__wrapper">
+              <button class="sequence__button" id="harmony__sequence-1"></button>
+              <button class="sequence__button" id="harmony__sequence-2"></button>
+              <button class="sequence__button" id="harmony__sequence-3"></button>
+              <button class="sequence__button" id="harmony__sequence-4"></button>
+              <button class="sequence__button" id="harmony__sequence-5"></button>
+              <button class="sequence__button" id="harmony__sequence-6"></button>
+              <button class="sequence__button" id="harmony__sequence-7"></button>
+              <button class="sequence__button" id="harmony__sequence-8"></button>
+            </div>
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="harmony-volume" type="range" min="-60" max="12" step="1" value="-6">
+              <button class="mute__button" id="harmony-mute">mute</button>
+            </div>
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>echo</h3>
+              <input class="slider slider__effects" id="harmony-echo" type="range" min="0" max="1" step="0.01" value="0.1">
+          </div>
+        </div>
+
+        <div class="container settings__container">
+          <h2>hi-hats</h2>
+
+          <div class="setting__wrapper">
+            <h3>sequence</h3>
+            <div class="sequence__wrapper">
+              <button class="sequence__button" id="hi-hats__sequence-1"></button>
+              <button class="sequence__button" id="hi-hats__sequence-2"></button>
+              <button class="sequence__button" id="hi-hats__sequence-3"></button>
+              <button class="sequence__button" id="hi-hats__sequence-4"></button>
+              <button class="sequence__button" id="hi-hats__sequence-5"></button>
+              <button class="sequence__button" id="hi-hats__sequence-6"></button>
+              <button class="sequence__button" id="hi-hats__sequence-7"></button>
+              <button class="sequence__button" id="hi-hats__sequence-8"></button>
+            </div>
+          </div>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="hi-hats-volume" type="range" min="-60" max="12" step="1" value="-30">
+              <button class="mute__button" id="hi-hats-mute">mute</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container settings__container">
+          <h2>bass high</h2>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="bass-high-volume" type="range" min="-60" max="12" step="1" value="-30">
+              <button class="mute__button" id="bass-high-mute">mute</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container settings__container">
+          <h2>bass low</h2>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="bass-low-volume" type="range" min="-60" max="12" step="1" value="-25">
+              <button class="mute__button" id="bass-low-mute">mute</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container settings__container">
+          <h2>rain</h2>
+
+          <div class="setting__wrapper">
+            <h3>volume</h3>
+            <div class="volume__wrapper">
+              <input class="slider" id="rain-volume" type="range" min="-60" max="12" step="1" value="-20">
+              <button class="mute__button" id="rain-mute">mute</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
